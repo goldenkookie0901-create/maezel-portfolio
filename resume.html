@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maezel L. Obogne — Information Officer I & Website Content Manager (Resume)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    :root {
+      --primary: #464feb;
+      --primary-dark: #3238c9;
+      --text: #0f172a;
+      --muted: #334155;
+      --subtle: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --badge-bg: #eff2fe;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.55;
+      padding: 2.5rem 1rem;
+    }
+
+    .resume-actions-bar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.35rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 12px rgba(70, 79, 235, 0.25);
+    }
+
+    .btn-print:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-back:hover {
+      background: #f1f5f9;
+    }
+
+    .resume-paper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3.5rem 4rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      border-bottom: 2.5px solid var(--primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .title-role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .experience-item {
+      margin-bottom: 1.75rem;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .job-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .company-name {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .division-name {
+      font-weight: 600;
+      color: var(--subtle);
+      font-size: 0.9rem;
+    }
+
+    .job-dates {
+      font-size: 0.85rem;
+      color: var(--subtle);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+
+    .job-bullets {
+      padding-left: 1.35rem;
+      margin-top: 0.65rem;
+    }
+
+    .job-bullets li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+      line-height: 1.55;
+    }
+
+    .job-bullets strong {
+      color: var(--text);
+    }
+
+    .skills-category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem;
+    }
+
+    .skill-box h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .skill-tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.8rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .strength-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .strength-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* Print Stylesheet for PDF Export */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .resume-actions-bar {
+        display: none !important;
+      }
+
+      .resume-paper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      @page {
+        margin: 1.25cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="resume-actions-bar">
+    <a href="index.html" class="btn btn-back">
+      ← Back to Portfolio Website
+    </a>
+    <button onclick="window.print()" class="btn btn-print">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Resume Document Container -->
+  <main class="resume-paper">
+    
+    <!-- Header Section -->
+    <header>
+      <h1>MAEZEL L. OBOGNE</h1>
+      <div class="title-role">Information Officer I & Website Content Manager</div>
+      <div style="font-size: 0.95rem; color: var(--subtle); margin-bottom: 0.75rem;">
+        Public Information & Internal Communications Professional
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:maezel.obogne@bir.gov.ph">maezel.obogne@bir.gov.ph</a>
+        </div>
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:maezel.obogne1008@gmail.com">maezel.obogne1008@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span>📱</span>
+          <span>[Mobile Number]</span>
+        </div>
+        <div class="contact-item">
+          <span>📍</span>
+          <span>[City, Province], Philippines</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Results-oriented Information Officer with experience in government communications, content development, information dissemination, stakeholder engagement, and digital content management. Skilled in writing, editing, internal communications, and public information campaigns. Adept at producing clear, accurate, and engaging communication materials that support organizational objectives and promote effective public service.
+      </p>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <span class="job-title">Information Officer I / Junior Information Officer</span>
+          </div>
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+          <span class="company-name">Bureau of Internal Revenue (BIR)</span> — 
+          <span class="division-name">Internal Communications Division</span>
+        </div>
+        
+        <ul class="job-bullets">
+          <li><strong>Communication Materials:</strong> Develop and disseminate communication materials for internal and external stakeholders.</li>
+          <li><strong>Content Drafting & Editing:</strong> Draft and edit announcements, advisories, news releases, feature stories, and other information products.</li>
+          <li><strong>Public Campaigns:</strong> Support communication campaigns that promote organizational programs, policies, and initiatives.</li>
+          <li><strong>Stakeholder Coordination:</strong> Coordinate with various offices and stakeholders to gather and communicate relevant information.</li>
+          <li><strong>Digital Platform Management:</strong> Assist in managing digital content and communication platforms.</li>
+          <li><strong>Official Documentation:</strong> Document official meetings, programs, trainings, and institutional activities.</li>
+          <li><strong>Accuracy & Timing:</strong> Ensure timely, accurate, and effective information dissemination.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="experience-header">
+        <div>
+          <span class="job-title">Bachelor of Arts in English Language</span> — 
+          <span class="company-name">Far Eastern University (FEU)</span>
+        </div>
+        <div class="job-dates">2019</div>
+      </div>
+    </section>
+
+    <!-- Core Competencies & Technical Skills -->
+    <section>
+      <h2 class="section-title">Core Competencies & Technical Skills</h2>
+      <div class="skills-category-grid">
+        
+        <div class="skill-box">
+          <h5>Core Competencies</h5>
+          <div class="skill-tags-list">
+            <span class="skill-tag">Public Information & Comms</span>
+            <span class="skill-tag">Internal Communications</span>
+            <span class="skill-tag">Content Writing & Editing</span>
+            <span class="skill-tag">News & Feature Writing</span>
+            <span class="skill-tag">Digital Communications</span>
+            <span class="skill-tag">Social Media Management</span>
+            <span class="skill-tag">Website Content Management</span>
+            <span class="skill-tag">Stakeholder Engagement</span>
+            <span class="skill-tag">Research & Info Gathering</span>
+            <span class="skill-tag">Event Documentation</span>
+            <span class="skill-tag">Project Coordination</span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h5>Digital, Web & Productivity</h5>
+          <div class="skill-tags-list">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Content Management Systems (CMS)</span>
+            <span class="skill-tag">Copywriting & Copy Editing</span>
+            <span class="skill-tag">Proofreading</span>
+            <span class="skill-tag">Microsoft Word</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Microsoft PowerPoint</span>
+            <span class="skill-tag">Microsoft Outlook</span>
+            <span class="skill-tag">Microsoft Teams</span>
+            <span class="skill-tag">Canva</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Strengths -->
+    <section>
+      <h2 class="section-title">Professional Strengths</h2>
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Excellent Written and Verbal Communication</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Strong Research and Analytical Skills</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Attention to Detail</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Public Service Orientation</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Team Collaboration</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Time Management</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Adaptability and Problem Solving</span>
+        </div>
+        <div class="strength-item">
+          <span class="strength-bullet"></span>
+          <span>Organizational Excellence</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
